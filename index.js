@@ -1,11 +1,22 @@
 import express from 'express';
+import mongoose from 'mongoose';
+import bodyParser from 'body-parser';
+
+// routes
+import userProfileRoutes from './routes/userProfile.route';
+
+
 
 const app = express();
 const PORT = 2345;
 
-app.get('/', (req, res) => {
-    res.send('API is running'); 
-});
+// DATABASE connection
+mongoose.connect('mongodb://localhost:27017/Rector', {useNewUrlParser: true});
+app.use(bodyParser.urlencoded({ extended: true }));
+
+
+// routes USAGE
+app.use('/', userProfileRoutes);
 
 
 
