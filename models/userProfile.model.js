@@ -17,7 +17,14 @@ const userProfileSchema = new mongoose.Schema({
    skills: String,
    achievements: String,
    createdAt: { type: Date, default: Date.now },
-   updatedAt: { type: Date, default: Date.now }
+   updatedAt: { type: Date, default: Date.now },
+   author: {
+      id: {
+         type: mongoose.Schema.Types.ObjectId,
+         ref: 'User'
+      },
+      username: String
+   }
 });
 
 const userProfileSchemaModel = mongoose.model('UserProfile', userProfileSchema);
