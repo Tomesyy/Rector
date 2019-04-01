@@ -5,17 +5,19 @@ const userProfileSchema = new mongoose.Schema({
    photo: String,
    emailAddress: String,
    matricNo: Number,
-   Department: String, 
-   Age: { type: Number, min: 16 },
-   Address: String,
+   department: String, 
+   age: { type: Number, min: 16 },
+   address: String,
    phoneNumber: Number,
    dateOfBirth: { type: Date },
    brandName: String,
    instagramHandle: String,
    twitterHandle: String,
    linkedInHandle: String,
-   Skills: String,
-   Achievement: String
+   skills: String,
+   achievements: String,
+   createdAt: { type: Date, default: Date.now },
+   updatedAt: { type: Date, default: Date.now }
 });
 
 const userProfileSchemaModel = mongoose.model('UserProfile', userProfileSchema);

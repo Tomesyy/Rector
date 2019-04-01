@@ -6,7 +6,7 @@ const userProfileController = {
             if(err){
                 console.log(err);
             } else {
-                return allProfiles;
+                console.log(allProfiles);
             }
         });
     },
@@ -17,7 +17,7 @@ const userProfileController = {
             if(err){
                 console.log(err);
             } else {
-                return newProfile;
+                console.log(newProfile);
             }
         });
     },
@@ -28,7 +28,7 @@ const userProfileController = {
             if(err){
                 console.log(err);
             } else {
-                return foundProfile;
+                console.log(foundProfile);
             }
         });
     },
@@ -40,7 +40,7 @@ const userProfileController = {
             if(err){
                 console.log(err);
             } else {
-                return updatedProfile;
+                console.log(updatedProfile);
             }
         });
     },
@@ -51,7 +51,7 @@ const userProfileController = {
             if(err){
                 console.log(err);
             } else {
-                return deletedProfile;
+                console.log(deletedProfile);
             }
         });
     }
