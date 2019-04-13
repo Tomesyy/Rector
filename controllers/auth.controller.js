@@ -6,6 +6,7 @@ import { getMaxListeners } from 'cluster';
 const userAuthController = {
     registerUser(req, res){
         const newUser = new User({username: req.body.username, emailAddress: req.body.emailAddress, firstName: req.body.firstName, lastName: req.body.lastName });
+        const mail = req.body.emailAddress;
         User.register(newUser, req.body.password, (err, user) => {
             if(err){
                 console.log(err);
@@ -25,7 +26,7 @@ const userAuthController = {
                 });
                 var mailOptions = {
                     from: 'adetomiwaadesanya01@gmail.com',
-                    to: 'phillipowolana@gmail.com',
+                    to: mail,
                     subject: 'Sign Up Confirmation Rector',
                     text: 'Thank you for signing up to Rector'
                 };
