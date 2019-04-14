@@ -1,7 +1,7 @@
 {
   "name": "rector",
   "version": "1.0.0",
-  "description": "A humanitarian project with the purpose of storing user information",
+  "description": "A humanitarian project with the purpose of storing information for students, thereby allowing companies to recruit top talents for internshipss and other use. ",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon --exec babel-node index.js",
